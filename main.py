@@ -1,4 +1,5 @@
 from conexion import conectar
+from alumnos import GestionAlumnos
 
 ULTIMA_OPCION = 6
 
@@ -18,7 +19,7 @@ class App:
         print("=" * 45)
 
     def __gestion_alumnos(self):
-        print("\n[Modulo de alumnos - pendiente de implementar]")
+        GestionAlumnos().run()
 
     def __gestion_prestamos(self):
         print("\n[Modulo de prestamos - pendiente de implementar]")
@@ -46,15 +47,15 @@ class App:
         elif opcion == ULTIMA_OPCION:
             print("\nSaliendo de la aplicación...")
         else:
-            print("\nOpción no valida. Prueba de nuevo.")
+            print("\nOpcion no valida. Prueba de nuevo.")
 
     def run(self):
-        print("Iniciando aplicación...")
+        print("Iniciando aplicacion...")
         conexion = conectar()
 
         if conexion is None:
             print(
-                "Error: no se pudo establecer la conexión. Compruebe que XAMPP esta en ejecución y que los datos de conexion.py son correctos.")
+                "Error: no se pudo establecer la conexion. Compruebe que XAMPP esta en ejecucion y que los datos de conexion.py son correctos.")
             return
 
         print("Conexion establecida correctamente.")
@@ -63,7 +64,7 @@ class App:
         opcion = 0
         while opcion != ULTIMA_OPCION:
             self.__crear_interfaz()
-            opcion = int(input("  Elige una opción: "))
+            opcion = int(input("  Elige una opcion: "))
             self.__ejecutar_opcion(opcion)
 
 
