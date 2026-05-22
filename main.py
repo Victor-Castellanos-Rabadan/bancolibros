@@ -2,6 +2,8 @@ from conexion import conectar
 from alumnos import GestionAlumnos
 from carga_csv import CargaCSV
 from gestion_datos import GestionDatos
+from prestamos import GestionPrestamos
+
 
 ULTIMA_OPCION = 6
 
@@ -24,7 +26,7 @@ class App:
         GestionAlumnos().run()
 
     def __gestion_prestamos(self):
-        print("\n[Modulo de prestamos - pendiente de implementar]")
+        GestionPrestamos().run()
 
     def __listados_busquedas(self):
         print("\n[Modulo de listados - pendiente de implementar]")
@@ -56,8 +58,7 @@ class App:
         conexion = conectar()
 
         if conexion is None:
-            print(
-                "Error: no se pudo establecer la conexion. Compruebe que XAMPP esta en ejecucion y que los datos de conexion.py son correctos.")
+            print("Error: no se pudo establecer la conexion. Compruebe que XAMPP esta en ejecucion y que los datos de conexion.py son correctos.")
             return
 
         print("Conexion establecida correctamente.")
