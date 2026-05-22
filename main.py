@@ -1,11 +1,11 @@
 from conexion import conectar
 from alumnos import GestionAlumnos
 from carga_csv import CargaCSV
-from gestion_datos import GestionDatos
 from prestamos import GestionPrestamos
+from listados import GestionListados
 
 
-ULTIMA_OPCION = 6
+ULTIMA_OPCION = 7
 
 
 class App:
@@ -17,9 +17,10 @@ class App:
         print("  1. Gestion de alumnos")
         print("  2. Gestion de prestamos")
         print("  3. Listados y busquedas")
-        print("  4. Gestion de datos")
-        print("  5. Copia de seguridad")
-        print("  6. Salir")
+        print("  4. Cargar alumnos desde CSV")
+        print("  5. Contratos")
+        print("  6. Copia de seguridad")
+        print("  7. Salir")
         print("=" * 45)
 
     def __gestion_alumnos(self):
@@ -29,13 +30,11 @@ class App:
         GestionPrestamos().run()
 
     def __listados_busquedas(self):
-        print("\n[Modulo de listados - pendiente de implementar]")
+        GestionListados().run()
 
-    def __gestion_datos(self):
-        GestionDatos().run()
+    def __cargar_csv(self):
+        CargaCSV().run()
 
-    def __copia_seguridad(self):
-        print("\n[Modulo de backup - pendiente de implementar]")
 
     def __ejecutar_opcion(self, opcion):
         if opcion == 1:
@@ -45,8 +44,10 @@ class App:
         elif opcion == 3:
             self.__listados_busquedas()
         elif opcion == 4:
-            self.__gestion_datos()
+            self.__cargar_csv()
         elif opcion == 5:
+            self.__contratos()
+        elif opcion == 6:
             self.__copia_seguridad()
         elif opcion == ULTIMA_OPCION:
             print("\nSaliendo de la aplicacion...")
