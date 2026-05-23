@@ -3,6 +3,7 @@ from alumnos import GestionAlumnos
 from carga_csv import CargaCSV
 from prestamos import GestionPrestamos
 from listados import GestionListados
+from contrato import GestionContratos
 
 
 ULTIMA_OPCION = 7
@@ -35,6 +36,8 @@ class App:
     def __cargar_csv(self):
         CargaCSV().run()
 
+    def __contratos(self):
+        GestionContratos().run()
 
     def __ejecutar_opcion(self, opcion):
         if opcion == 1:
