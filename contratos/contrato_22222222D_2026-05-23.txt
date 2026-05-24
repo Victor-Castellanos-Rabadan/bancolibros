@@ -1,0 +1,23 @@
+==================================================
+        IES ARCIPRESTE DE HITA
+    CONTRATO DE PRESTAMO DE LIBROS
+==================================================
+Fecha: 23/05/2026
+
+DATOS DEL ALUMNO
+NIE:      22222222D
+Nombre:   Ana Rodriguez Gomez
+Curso:    1ESO-B
+
+LIBROS PRESTADOS
+--------------------------------------------------
+ISBN               TITULO                        
+--------------------------------------------------
+978-3333333333     Ingles 1ESO                   
+--------------------------------------------------
+
+El alumno se compromete a devolver los libros
+en buen estado al finalizar el curso.
+
+Firma del alumno o tutor: ___________________
+==================================================

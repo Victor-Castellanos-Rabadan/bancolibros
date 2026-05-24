@@ -4,6 +4,7 @@ from carga_csv import CargaCSV
 from prestamos import GestionPrestamos
 from listados import GestionListados
 from contrato import GestionContratos
+from backup import Backup
 
 
 ULTIMA_OPCION = 7
@@ -38,6 +39,9 @@ class App:
 
     def __contratos(self):
         GestionContratos().run()
+
+    def __copia_seguridad(self):
+        Backup().run()
 
     def __ejecutar_opcion(self, opcion):
         if opcion == 1:

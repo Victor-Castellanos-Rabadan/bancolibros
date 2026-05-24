@@ -1,0 +1,4 @@
+isbn,titulo,autor,numero_ejemplares,id_materia,id_curso
+978-1111111111,Matematicas 1ESO,Anaya,10,1,1ESO-A
+978-2222222222,Lengua Castellana 1ESO,Santillana,20,2,1ESO-B
+978-3333333333,Ingles 1ESO,Oxford,2,3,1ESO-B
